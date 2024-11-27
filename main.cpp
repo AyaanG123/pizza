@@ -6,13 +6,14 @@
 #include <iomanip>
 using namespace std;
 //declaring functions
-double calcTotal(int toppings, char size, double toppingsPrice, double sizePrice);
+double calcTotal(int toppings, char size, double toppingsPrice, double sizePrice, double all);
 void bill(double total);
 int main() {
     int toppings;
     char size;
     double toppingsPrice;
     double sizePrice;
+    double all
     double total = calcTotal(toppings, size, toppingsPrice, sizePrice);
     cout<<"WELCOME TO GILLY PIZZA"<<endl;
     cout<<"WHAT SIZE PIZZA WOULD YOU LIKE(S OR L): ";
@@ -24,7 +25,7 @@ int main() {
     return 0;
 }
 //function to calculate total price
-double calcTotal(int toppings, char size, double toppingsPrice, double sizePrice){
+double calcTotal(int toppings, char size, double toppingsPrice, double sizePrice, double all){
     if(tolower(size) == 's'){
         sizePrice = 9.99;
     }
