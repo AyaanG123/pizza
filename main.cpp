@@ -34,7 +34,9 @@ double calcTotal(int toppings, char size, double toppingsPrice, double sizePrice
     
     toppingsPrice = toppings*0.55;
     
-    return sizePrice + toppingsPrice;
+    all = sizePrice + toppingsPrice;
+    
+    return all
     
     
 }
