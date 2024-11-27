@@ -7,20 +7,20 @@
 using namespace std;
 //declaring functions
 double calcTotal(int toppings, char size, double toppingsPrice, double sizePrice, double all);
-void bill(double all);
+void bill(double total);
 int main() {
     int toppings;
     char size;
     double toppingsPrice;
     double sizePrice;
-    double all
-    double total = calcTotal(toppings, size, toppingsPrice, sizePrice);
+    double all;
+    double total = calcTotal(toppings, size, toppingsPrice, sizePrice, all);
     cout<<"WELCOME TO GILLY PIZZA"<<endl;
     cout<<"WHAT SIZE PIZZA WOULD YOU LIKE(S OR L): ";
     cin>>size;
     cout<<"HOW MANY TOPPINGS WOULD YOU LIKE: ";
     cin>>toppings;
-    bill(all);//calling function
+    bill(total);//calling function
 
     return 0;
 }
@@ -42,10 +42,10 @@ double calcTotal(int toppings, char size, double toppingsPrice, double sizePrice
     
 }
 
-void bill(double all){
+void bill(double total){
     cout<<"-------GILLY PIZZA-------"<<endl;
     cout<<"SUBTOTAL: $"<< total<<endl;
-    cout<<"TAX: $"<< fixed << setprecision(2) << all*0.06625<<endl;
-    cout<<"TOTAL: $"<< all*1.06625<<endl;
+    cout<<"TAX: $"<< fixed << setprecision(2) << total*0.06625<<endl;
+    cout<<"TOTAL: $"<< total*1.06625<<endl;
     cout<<"--------THANK YOU--------"<<endl;
 }
